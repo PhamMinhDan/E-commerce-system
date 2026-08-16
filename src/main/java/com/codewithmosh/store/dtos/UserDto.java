@@ -1,14 +1,20 @@
 package com.codewithmosh.store.dtos;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.time.LocalDateTime;
-import java.util.Set;
 
-@Data
 @AllArgsConstructor
-public class UserResponse {
+@NoArgsConstructor
+@Getter
+@Setter
+@Builder
+public class UserDto {
     private Long id;
     private String username;
     private String email;
@@ -16,6 +22,6 @@ public class UserResponse {
     private String lastName;
     private String phone;
     private String status;
-    private Set<String> roles;
-    private LocalDateTime createAt;
+    private LocalDateTime createdAt;
+    private LocalDateTime updatedAt;
 }
